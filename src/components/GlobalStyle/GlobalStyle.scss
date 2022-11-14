@@ -1,0 +1,99 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+:root{
+
+}
+
+body{
+    font-family: "Rubik", sans-serif;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.2s;
+    background: #010813;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+section {
+    padding: 3rem 7%;
+}
+
+.heading{
+    display: block;
+    text-align: center;
+    margin: 4rem auto;
+    font-size: 2.8rem;
+    color: #fff;
+    max-width: 65rem;
+    line-height: 1.5;
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: -3rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-image: url(../images/Path318.png);
+        background-size: cover;
+        background-position: center;
+        min-width: 10rem;
+        height: 1.5rem;
+    }
+    
+    span{
+        display: block;
+        padding: .5rem;
+        font-weight: bolder;
+    }
+}
+
+button{
+    padding: .8rem 2.5rem;
+    border-radius: 1rem;
+    outline: none;
+    border: .1rem solid #bbb;
+    margin-left: 1.5rem;
+    color: #fff;
+    background: none;
+    font-weight: 550;
+
+    &:hover{
+        cursor: pointer;
+        transition: .3s;
+        transform: scale(.98);
+    }
+}
+
+@media (max-width: 1200px) {
+    html {
+      font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
