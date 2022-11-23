@@ -6,26 +6,32 @@ const FooterItems = [
     {
         name: 'Home',
         icon: 'fa-brands fa-facebook',
+        href: "/facebook"
     },
 
     {
         name: 'About',
-        icon: "fa-brands fa-twitter"
+        icon: "fa-brands fa-twitter",
+        href: "/twitter"
     },
 
     {
         name: 'Performer',
-        icon: "fa-brands fa-youtube"
+        icon: "fa-brands fa-youtube",
+        href: "/youtube"
     },
 
     {
         name: 'Contact',
-        icon: "fa-brands fa-invision" 
+        icon: "fa-brands fa-invision",
+        href: "/invision"
     },
 
     {
         name: 'Blog',
-        icon: "fa-brands fa-instagram"
+        icon: "fa-brands fa-instagram",
+        href: "/instagram"
+        
     },
 ]
 
@@ -43,7 +49,7 @@ function Footer() {
                 <div className="icons-contact">
                     {
                         FooterItems.map((item, index) =>
-                            <a key={index} class={item?.icon}></a>
+                            <a  key={index} href={item.href} class={item?.icon}></a>
                         )
                     }
                 </div>

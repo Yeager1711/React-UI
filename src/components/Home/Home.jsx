@@ -1,6 +1,13 @@
 import React from "react";
 import './Home.scss'
-function Home() {
+function HomeItems({
+    title,
+    title_span,
+    desc,
+    dwl_title,
+    dwl_imgAS,
+    dwl_imgGP,
+}) {
     return(
         React.createElement('section',
             {
@@ -11,18 +18,18 @@ function Home() {
             React.createElement('div',{className: 'box-container'}, 
             
                 React.createElement('div', {className:'box-title'}, 
-                    React.createElement('h2', null, 'Experience ', 
-                        React.createElement('span', null,'The Best Quality Music')),
-                    React.createElement('p', {className:'text-title'}, 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus atque fuga delectus numquam consequatur velit autem distinctio possimus culpa!'), 
+                    React.createElement('h2', null,  title, 
+                        React.createElement('span', null, title_span)),
+                    React.createElement('p', {className:'text-title'}, desc), 
                 
                 
                     React.createElement('div', {className:'Dowload-store'}, 
                         
-                        React.createElement('p', null, ' Dowload now on IOS and Android'),
+                        React.createElement('p', null, dwl_title),
                     
                         React.createElement('div', {className:'img-Dowload'},
-                            React.createElement('img', {src: (require('../images/AppStore.png'))}),
-                            React.createElement('img', {src: (require('../images/GooglePlay.png'))})
+                            React.createElement('img', {src: dwl_imgAS}),
+                            React.createElement('img', {src: dwl_imgGP})
                         )
                     )
                 ),
@@ -38,6 +45,22 @@ function Home() {
 
             )
         )
+    )
+}
+
+function Home() {
+    return(
+        <HomeItems 
+        title= 'Experience'
+        title_span = 'The Best Quality Music'
+        desc = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum necessitatibus atque fuga delectus numquam consequatur velit autem distinctio possimus culpa!'
+        
+        dwl_title = 'Dowload now on IOS and Android'
+        dwl_imgAS = {require('../images/AppStore.png')}
+        dwl_imgGP = {require('../images/GooglePlay.png')}
+
+
+        />
     )
 }
 
